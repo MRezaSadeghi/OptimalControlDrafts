@@ -16,7 +16,7 @@ g = 1;
 X0 = [0.9; -0.9; 0.9];
 Nk = 60; % number of iteration to converge (k)
 
-%% Value Iteration
+%% Value Iteration (Section 8.4)
 tic();
 P = S; % initial guess
 
@@ -37,7 +37,7 @@ end
 Lnorm_VI = Lnorm;
 fprintf("VI: %2.2fms\n", toc()*1000);
 
-%% Policy Iteration
+%% Policy Iteration (Section 8.5)
 tic();
 L0 = zeros(udim, xdim); % initial guess
 
@@ -60,7 +60,7 @@ end
 Lnorm_PI = Lnorm;
 fprintf("PI: %2.2fms\n", toc()*1000);
 
-%% Approximation
+%% Approximation (Section 8.5.1)
 tic();
 L0 = zeros(udim, xdim); % initial guess
 
